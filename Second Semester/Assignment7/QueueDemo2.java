@@ -1,0 +1,2 @@
+public class QueueDemo2 {
+}
