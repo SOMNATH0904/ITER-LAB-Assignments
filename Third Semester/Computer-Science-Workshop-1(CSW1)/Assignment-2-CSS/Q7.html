@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+    <style>
+        .dropdown {
+            box-sizing: border-box;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            background-color: crimson;
+            border-radius: 5px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .menu-div {
+            width: 200px;
+            text-align: center;
+            width: 200px;
+            height: 400px;
+            box-sizing: border-box;
+        }
+
+        .l1 {
+            background-color: coral;
+            font-family: monospace;
+            font-size: large;
+            color: gainsboro;
+        }
+
+        .l2 {
+            background-color: cadetblue;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: gainsboro;
+        }
+
+        .l3 {
+            background-color: darkcyan;
+            font-family:Arial, Helvetica, sans-serif;
+            color: gainsboro;
+        }
+
+        .l4 {
+            background-color: darkgreen;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: gainsboro;
+        }
+
+        .dropdown:hover {
+            cursor: pointer;
+        }
+        .dropdown:hover+.menu {
+            width: 250px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">Dropdown Menu</div>
+    <div class="menu">
+        <div class="l1">Home</div>
+        <div class="l2">Services</div>
+        <div class="l3">About</div>
+        <div class="l4">Contact</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question 8</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
+
+    .container {
+      height: 400px;
+      width: 300px;
+      border: 2px solid black;
+      padding: 10px;
+      margin: 30px;
+    }
+
+    .container h1 {
+      text-align: center;
+      text-decoration: underline;
+      color: darkcyan;
+    }
+
+
+    /* label {
+      display: flex;
+    } */
+
+    /* .container form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    } */
+
+    input[type="text"], textarea, select {
+      box-sizing: border-box;
+      border: 2px solid crimson;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    input[type="submit"] {
+      box-sizing: border-box;
+      border: 2px solid black;
+      background-color: darkcyan;
+      color: black;
+      padding: 15px;
+      margin: 15px;
+      width: 50%;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: blueviolet;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Write to Us</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name..."> <br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email..."> <br>
+
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject">
+        <option value="general">General Inquiry</option>
+        <option value="support">Customer Support</option>
+        <option value="feedback">Feedback</option>
+      </select> <br>
+      
+      <label for="decr">Description:</label>
+      <textarea name="decription" id="decr" placeholder="Enter decription of inquiry..."></textarea> <br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

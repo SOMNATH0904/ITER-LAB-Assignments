@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+    <style>
+        /* body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        .forms {
+            background-color: rgb(173, 168, 168);
+            width: 40%;
+            height: 500px;
+            text-align: center;
+            display: block;
+            padding: 20px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        input[type="text"], input[type=password], select {
+            width: 20%;
+            padding: 10px 12px;
+            margin: 6px 0;
+            border: 3px solid blue;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 30%;
+            background-color: orange;
+            color: brown;
+            padding: 12px 16px;
+            margin: 6px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        label {
+            padding: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <form action="#form">
+            <img src="SOA.png" alt="SOA Logo" style="width: 80px; height: 80px; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;">
+            <h3>Registration</h3>
+            <label for="name">UserName</label>
+            <input type="text" name="UserName" id="name" placeholder="Enter name..." required><br>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter email..." required><br>
+        
+            <label for="mobile">Mobile</label>
+            <input type="text" name="Mobile" id="mobile" placeholder="Enter MobileNo..." required><br>
+
+            <label for="gender">Gender</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label> <br>
+        
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="select city">Select City:</option>
+                <option value="khordha">Khordha</option>
+                <option value="bbsr">Bhubaneswar</option>
+                <option value="cuttack">Cuttack</option>
+                <option value="Bhadrak">Bhadrak</option>
+            </select> <br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter password..." required> <br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .container {
+            height: 500px;
+            width:350px;
+            background-color: gray;
+        }
+        .container img {
+            height: 60px;
+            width:60px;
+            position: relative;
+            left:140px;
+            top:20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            padding: 20px;
+            font-weight: bold;
+        }
+        input {
+            border:2px solid blue;
+            margin-top: 20px;
+        }
+        #city {
+            width:200px;
+            border:2px solid blue;
+        }
+        .btn {
+            position: relative;
+            left:15px; 
+            top:20px;
+            width:85%;
+            padding:10px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="SOA.png" alt="soa">
+        <h2>Registration</h2>
+        <div class="info"></div>
+            <label for="name">UserName:</label>
+            <input type="text" id="name" placeholder="Enter name..."> <br>  
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter email..."> <br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" placeholder="Enter MobileNo..."> <br>
+
+            <label>Gender:</label>
+            <input type="radio" id="female" val="female" name="gn">
+            <label for="female">Female</label>
+            <input type="radio" id="male" val="male" name="gn">
+            <label for="male">Male</label> <br><br>
+
+            <label for="city">City:</label>
+            <select name="city" id="city">
+                <option>Select City:</option>
+                <option value="jharkhand">Jharkhand</option>
+                <option value="odisha">Odisha</option>
+                <option value="bengal">West Bengal</option>
+                <option value="bihar">Bihar</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+            </select> <br>
+
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" placeholder="Enter password..."> <br>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>
