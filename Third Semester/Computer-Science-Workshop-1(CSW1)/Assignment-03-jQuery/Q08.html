@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        });
+        });
+        </script>
+        <style>
+            body {
+                background-color: chartreuse;
+                padding: auto;
+                margin: auto;
+                text-align: center;
+            }
+        table {
+        width: 80%;
+        margin: auto;
+        }
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        background-color: chocolate;
+        }
+        h2, p, div {
+        text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <h2>Game Company Post List Filter</h2>
+    <p>Type to filter departments, jobs or posts</p>
+    <div>
+      <input id="myInput" type="text" placeholder="Search ...">
+    </div>
+    <br><br>
+    <table>
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th>Job</th>
+          <th>Post</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+      <tr>
+        <td>Graphics Design</td>
+        <td>Texture Designer</td>
+        <td>Lead Texture Designer</td>
+      </tr>
+      <tr>
+        <td>Graphics Design</td>
+        <td>Texture Designer</td>
+        <td>Assistant Texture Designer</td>
+      </tr>
+      <tr>
+        <td>Graphics Design</td>
+        <td>Skins Designer</td>
+        <td>Lead Skins Designer</td>
+      </tr>
+      <tr>
+        <td>Graphics Design</td>
+        <td>UI Designer</td>
+        <td>Lead UI Designer</td>
+      </tr>
+      <tr>
+        <td>Motion Capture</td>
+        <td>Human Body Motion Capture</td>
+        <td>Lead Motion Designer</td>
+      </tr>
+      <tr>
+        <td>Motion Capture</td>
+        <td>Human Body Motion Capture</td>
+        <td>Assistant Motion Designer</td>
+      </tr>
+      <tr>
+        <td>Motion Capture</td>
+        <td>Objects Motion Capture</td>
+        <td>Lead Objects Motion Designer</td>
+      </tr>
+      <tr>
+        <td>Audio Designer</td>
+        <td>Vocal Artists</td>
+        <td>Lead Vocal Artist</td>
+      </tr>
+      <tr>
+        <td>Audio Designer</td>
+        <td>FX Artist</td>
+        <td>Lead FX Artist</td>
+      </tr>
+      <tr>
+        <td>VFX</td>
+        <td>VFX Artists</td>
+        <td>Lead VFX Artist</td>
+      </tr>
+      <tr>
+        <td>VFX</td>
+        <td>VFX Artists</td>
+        <td>Assistant VFX Artist</td>
+      </tr>
+      <tr>
+        <td>Script</td>
+        <td>Script Writer</td>
+        <td>Script Writer</td>
+      </tr>
+      <tr>
+        <td>Script</td>
+        <td>Script Writer</td>
+        <td>Scenario Writer</td>
+      </tr>
+      <tr>
+        <td>Testers</td>
+        <td>Closed Beta</td>
+        <td>Beta Tester</td>
+      </tr>
+      <tr>
+        <td>Testers</td>
+        <td>Open Beta</td>
+        <td>Players</td>
+      </tr>
+      <tr>
+        <td>Marketing</td>
+        <td>Advertisement</td>
+        <td>Lead Advertiser</td>
+      </tr>
+      <tr>
+        <td>Marketing</td>
+        <td>Advertisement</td>
+        <td>Assistant Advertiser</td>
+      </tr>
+      <tr>
+        <td>Marketing</td>
+        <td>Sales</td>
+        <td>Sales Executive</td>
+      </tr>
+      <tr>
+        <td>Game Developer</td>
+        <td>Game Developer</td>
+        <td>Lead Game Developer</td>
+      </tr>
+      <tr>
+        <td>Game Developer</td>
+        <td>Game Developer</td>
+        <td>Assistant Game Developer</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Question 8</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="filters">
+    <h2>Filter by Category:</h2>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="tech">Technology</option>
+      <option value="finance">Finance</option>
+      <option value="ComputerProgrammer">Computer Programmer</option>
+      <option value="WebDeveloper">Web Developer</option>
+      <option value="Electrician">Electrician</option>
+      <option value="Management">Management</option>
+      <option value="Server">Server</option>
+      <option value="SalesManagement">Sales Management</option>
+      <option value="Technician">Technician</option>
+      <option value="Architect">Architect</option>
+      <option value="Accountant">Accountant</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Journalist">Journalist</option>
+      <option value="AdministrativeAssistant">Administrative assistant</option>
+      <option value="Receptionist">Receptionist</option>
+      <option value="Chef">Chef</option>
+      <option value="Photographer">Photographer</option>
+      <option value="Cashier">Cashier</option>
+      <option value="HumanResources">Human Resources</option>
+    </select>
+  </div>
+
+  <div class="job-listings">
+    
+    <h4>The Available Posts for this category are as follows : </h4>
+  </div>
+
+
+
+  <script>
+
+const jobData = [
+  { title: 'Software Engineer', category: 'tech' },
+  { title: 'Financial Analyst', category: 'finance' },
+  { title: 'Electrical', category: 'ComputerProgrammer' },
+  { title: 'Hotel Management', category: 'Receptionist' },
+  { title: 'Photography', category: 'Photographer' },
+  { title: 'Financial Analyst', category: 'tech' },
+  { title: 'Financial Analyst', category: 'Server' },
+  { title: 'Financial Analyst', category: 'Management' },
+  { title: 'Financial Analyst', category: 'Accountant' },
+  { title: 'Financial Analyst', category: 'Engineer' },
+  { title: 'Financial Analyst', category: 'tech' },
+  { title: 'Financial Analyst', category: 'Server' },
+  { title: 'Financial Analyst', category: 'Management' },
+  { title: 'Financial Analyst', category: 'Engineer' },
+  { title: 'Financial Analyst', category: 'finance' },
+  { title: 'Financial Analyst', category: 'Server' },
+  { title: 'Financial Analyst', category: 'tech' },
+  { title: 'Financial Analyst', category: 'Engineer' },
+  { title: 'Financial Analyst', category: 'finance' },
+  { title: 'Financial Analyst', category: 'Management' },
+  { title: 'Financial Analyst', category: 'Accountant' },
+  { title: 'Financial Analyst', category: 'finance' },
+  { title: 'Financial Analyst', category: 'tech' },
+  { title: 'Financial Analyst', category: 'Management' },
+];
+
+function displayJobs(category) {
+  const jobListings = $('.job-listings');
+  jobListings.empty();
+
+  jobData.forEach(job => {
+    if (category === 'all' || job.category === category) {
+      const jobItem = `<div class="job-item">${job.title}</div>`;
+      jobListings.append(jobItem);
+    }
+  });
+}
+
+$(document).ready(function() {
+
+  displayJobs('all');
+
+
+  $('#categoryFilter').change(function() {
+    const selectedCategory = $(this).val();
+    displayJobs(selectedCategory);
+  });
+});
+
+
+  </script>
+</body>
+</html> -->

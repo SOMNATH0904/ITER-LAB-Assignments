@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Question 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#table tr:last").after("<tr><td>abc</td><td>027</td><td>CSE</td></tr>");
+            });
+            $("#btn2").click(function () {
+                 $("#table").css({ "color": "salmon", "background-color": "cyan" });
+            });
+            $("#btn3").click(function () {
+                 var removeId = $("#remove").val();
+                $("#" + removeId).remove();
+            });
+        });
+    </script>
+    <style>
+        table,th,td,tr{
+            border: 2px solid cadetblue;
+            border-collapse: collapse;
+            padding: 15px;
+            margin: 20px;
+        }
+        #btn1, #btn2, #btn3{
+            color:indianred;
+            background-color:lightyellow;
+            font-size: 15px;
+            border: 2px solid skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Section</th>
+            <th>Branch</th>
+        </tr>
+    </table>
+    <button id="btn1">Add row</button>
+    <button id="btn2">Change color</button>
+    <p>Enter a text: <input type="text" id="remove"><br>
+    <!-- the ids are already preset to "remove",so by giving text as remove in it ,will remove the element -->
+    <button id="btn3">Remove</button>
+</body>
+
+</html>

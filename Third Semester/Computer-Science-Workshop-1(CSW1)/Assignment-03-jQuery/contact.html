@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        input, textarea {
+            margin-top: 20px;
+        }
+        .name-label, .mail-label, .msg-label {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="Index.html">GO BACK</a>
+    <br><br>
+    <form action="">
+    <label for="your-name">Name: </label>
+    <input type="text" name="your-name" id="your-name" placeholder="Enter your Name ..." required>
+    <label class="name-label"></label>
+    <br>
+    <label for="mail">Email: </label>
+    <input type="email" name="mail" id="mail" placeholder="Enter your Email ..." required>
+    <label class="mail-label"></label>
+    <br>
+    <textarea name="" id="" cols="30" rows="10" id="msg" placeholder="Enter your Message ..." required>Write your message here... </textarea>
+    <label class="msg-label"></label>
+    </form>
+    <button id="btn">Submit</button>
+
+
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                var name = $("#your-name").val();
+                if (name == "") {
+                    $(".name-label").text("*This field is required");
+                } else {
+                    $(".name-label").hide();
+                }
+            });
+            $("#btn").click(function () {
+                var name = $("#mail").val();
+                if (name == "") {
+                    $(".mail-label").text("*This field is required");
+                } else {
+                    $(".mail-label").hide();
+                }
+            });
+            $("#btn").click(function () {
+                var name = $("#msg").val();
+                if (name == "") {
+                    $(".msg-label").text("*This field is required");
+                } else {
+                    $(".msg-label").hide();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

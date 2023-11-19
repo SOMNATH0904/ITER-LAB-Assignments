@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 10 (Responsive Website)</title>
+  <style>
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    
+
+    header nav ul li {
+      margin: 0 20px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
+      /* Adjust styles for smaller screens */
+      header nav {
+        background-color: brown;
+      }
+
+      header nav ul li a {
+        color: white;
+      }
+    }
+
+    /* Hover Effect */
+    .interactive-element {
+      /* Define hover effect styles */
+    }
+
+    /* Team member content */
+    #teamMemberContent {
+      display: none;
+    }
+
+    footer p {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+  </style>
+
+
+<script>
+    $(document).ready(function() {
+  // Hover effect for interactive elements
+  $('.interactive-element').hover(
+    function() {
+      $(this).addClass('hovered');
+    },
+    function() {
+      $(this).removeClass('hovered');
+    }
+  );
+
+  // Toggle team member content on About page
+  $('#toggleTeamMember').click(function() {
+    $('#teamMemberContent').toggle();
+  });
+
+  // Form validation for Contact page
+  $('#contactForm').submit(function(event) {
+    let name = $('#name').val();
+    let email = $('#email').val();
+    let message = $('#message').val();
+    let valid = true;
+
+    if (name === '' || email === '' || message === '') {
+      valid = false;
+      $('#error').text('All fields are required');
+    } else {
+      $('#error').text('');
+    }
+
+    if (!isValidEmail(email)) {
+      valid = false;
+      $('#error').text('Please use a valid email address');
+    }
+
+    if (!valid) {
+      event.preventDefault();
+    }
+  });
+
+  // Function to validate email format
+  function isValidEmail(email) {
+    // Add email validation logic here
+    return true; // Placeholder - replace with actual validation
+  }
+});
+
+</script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page Content -->
+    <h1>Welcome to our website!</h1>
+    <!-- Content for other pages can go here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Website - Created by Somnath</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

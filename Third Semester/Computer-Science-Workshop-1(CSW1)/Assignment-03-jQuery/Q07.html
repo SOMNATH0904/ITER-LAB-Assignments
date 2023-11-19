@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+    
+    <script>
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question 7</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+
+  <style>
+    .emailInput, .userNameInput {
+      padding: 5px;
+      margin: 5px;
+      border: 2px solid black;
+    }
+
+    .emailInput:hover, .userNameInput:hover {
+      background-color: chocolate;
+      color: white;
+    }
+
+    input[type="submit"] {
+      padding: 15px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: darkcyan;
+      color: azure;
+    }
+
+  </style>
+
+</head>
+<body>
+  <form id="signupForm">
+    <p></p>
+    <p>Enter your Email : <input type="email" class="emailInput" placeholder="Enter your Email" required></p>
+    <p>Enetr your UserName : <input type="text" class="userNameInput" placeholder="Enter your UserName" required></p>
+
+    <input type="submit" value="Submit">
+  </form>
+
+
+  <script>
+    $(document).ready(function() {
+        $('#signupForm').submit(function() {
+            const email = $('.emailInput').val();
+            const username = $('.userNameInput').val();
+            if (email === '' || username === '') {
+                alert('Please Fill in all Fields');
+                return;
+            }
+            alert('Form Submitted Successfully!');
+        });
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

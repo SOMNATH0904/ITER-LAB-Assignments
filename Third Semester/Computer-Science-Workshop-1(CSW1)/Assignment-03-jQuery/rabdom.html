@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .grandparent {
+            position: absolute;
+            width: 500px;
+            height:500px;
+            border: 1px solid green;
+        }
+
+        .parent {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border: 1px solid red;
+        }
+
+        .child {
+            width: 50%;
+            height: 50%;
+            border: 1px solid blue;
+            position: relative;
+            left: 5%;
+            top: 5%;
+        }
+
+
+        /* .container-grandParent {
+            height: 500px;
+            width: 500px;
+            border: 2px solid green;
+            color: white;
+            text-align: center;
+            position: absolute;
+            left: 50px;
+            top: 20px;
+        }
+
+        .container-parent {
+            height: 250px;
+            width: 250px;
+            color: white;
+            text-align: center;
+            border: 2px solid red;
+            position: relative;
+            left: 125px;
+            top: 125px;
+        } 
+
+        .container-child {
+            height: 80px;
+            width: 80px;
+            color: white;
+            text-align: center;
+            border: 2px solid purple;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">Child</div>
+        </div>
+    </div>
+    <!-- <div class="container-grandParent">
+        GrandParent
+        <div class="container-parent">
+            Parent
+            <div class="container-child">
+                Child
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".pop-up").fadeIn("fast");
+            });
+        });
+    </script>
+
+    <style>
+        .pop-up {
+            display: none;
+            position: fixed;
+            border: 2px solid rebeccapurple;
+            border-radius: 15px;
+            margin: 30px;
+            padding: 30px;
+            width: 250px;
+            height: 100px;
+            background-color: brown;
+            text-align: center;
+            color: wheat;
+            font-size: 35px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        button {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>Click here!</button> <br>
+    <div class="pop-up">
+        This is a PopUp Box
+    </div>
+</body>
+</html>

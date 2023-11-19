@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Question-5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <style>
+        #box1,#box2 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            display: none;
+        }
+
+        button {
+            margin: 5px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#slidedown").click(function(){
+                $("#box1").slideDown();
+            });
+            $("#animation").click(function(){
+                $("#ani").css({ color:'red'},"slow");
+                $("#ani").animate({ fontSize:"2em"},"slow");
+            });
+            $("#fadein").click(function(){
+                $("#box2").fadeIn();
+            });
+            $("#hide").click(function(){
+                $("#p1").hide();
+            });
+             $("#show").click(function () {
+                 $("#sh").show();
+            });
+            $("#h2").dblclick(function () {
+                $(this).fadeOut();
+            });
+             $("#mouseen").mouseenter(function () {
+                 $(this).css("background-color", "yellow");
+             });
+             $("#mousele").mouseleave(function () {
+                 $(this).css("background-color", "red");
+             });
+             $("#attr").click(function () {
+                 alert($("#image").attr("alt"));
+             });
+            $("#html").click(function () {
+                $("#text").html("<h2>This is Modified text.<h2>");
+             });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center; text-decoration: underline;">Example Page</h1>
+    <button id="slidedown">Click Here to SlideDown</button>
+    <div id="box1"></div>
+    <br><br><br>
+
+    <div id="ani" style="background-color: aqua; width: 160px;">See Animation</div>
+    <button id="animation">Animate</button>
+    <br><br>
+
+    <button id="fadein">Fade In</button>
+    <div id="box2"></div>
+    <br>
+
+
+    <p id="p1">Click the Hide Button to hide this line</p>
+    <button id="hide">Hide</button>
+
+    
+    <p>Click the Show Button to see some Hidden text</p>
+    <button id="show">Show</button>
+    <div id="sh" style="width:150px; background-color: aquamarine; color: forestgreen; display: none;font-size: 25px;">Hey,Wishing you a great day...</div>
+    
+    <p>Double-click on the heading.</p>
+    <h2 id="h2" style="color:blueviolet;background-color: aquamarine;width: 310px;">Double Click on Me to Hide</h2>
+
+
+    <p>Enter the mouse to the below div to change the color </p>
+    <div id="mouseen" style="width: 200px; height: 20px; background-color: green;"></div>
+    <br>
+
+    <p>Enter the mouse on the below div and after that leave the mouse to change the div color</p>
+    <div id="mousele" style="width: 200px; height: 80px; background-color: purple;"></div>
+    <br><br>
+
+    <button id="attr">Image Link source</button>
+    <img id="image" src="SOA-PNG.png" alt="https://www.soa.ac.in/" style="height: 150px; width: 150px;">
+    <br><br><br>
+    <button id="html">Change Text</button>
+    <div id="text">This is some text.</div>
+</body>
+
+</html>
