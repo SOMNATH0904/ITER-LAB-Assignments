@@ -20,10 +20,7 @@
       text-decoration: none;
     }
 
-    /* Responsive Design */
-    /* Media queries for responsiveness */
     @media screen and (max-width: 768px) {
-      /* Adjust styles for smaller screens */
       header nav {
         background-color: brown;
       }
@@ -33,12 +30,6 @@
       }
     }
 
-    /* Hover Effect */
-    .interactive-element {
-      /* Define hover effect styles */
-    }
-
-    /* Team member content */
     #teamMemberContent {
       display: none;
     }
@@ -54,7 +45,6 @@
 
 <script>
     $(document).ready(function() {
-  // Hover effect for interactive elements
   $('.interactive-element').hover(
     function() {
       $(this).addClass('hovered');
@@ -64,12 +54,10 @@
     }
   );
 
-  // Toggle team member content on About page
   $('#toggleTeamMember').click(function() {
     $('#teamMemberContent').toggle();
   });
 
-  // Form validation for Contact page
   $('#contactForm').submit(function(event) {
     let name = $('#name').val();
     let email = $('#email').val();
@@ -92,12 +80,7 @@
       event.preventDefault();
     }
   });
-
-  // Function to validate email format
-  function isValidEmail(email) {
-    // Add email validation logic here
-    return true; // Placeholder - replace with actual validation
-  }
+  
 });
 
 </script>
@@ -107,17 +90,17 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Q10_index.html">Home</a></li>
+        <li><a href="Q10_about.html">About</a></li>
+        <li><a href="Q10_contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Home Page Content -->
+  
     <h1>Welcome to our website!</h1>
-    <!-- Content for other pages can go here -->
+  
   </main>
 
   <footer>
