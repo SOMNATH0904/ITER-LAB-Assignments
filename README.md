@@ -9,9 +9,9 @@
 </ol>
 
 ### Semsester Wise
-> 1. [First Semester]([https://github.com/RiturajGupta21/ITER-ASSIGNMENTS/tree/master/Sem-1](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/First%20Semester))
-> 2. [Second Semester]([https://github.com/RiturajGupta21/ITER-ASSIGNMENTS/tree/master/Sem-2](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/Second%20Semester))
-> 3. [Third Semester]([https://github.com/RiturajGupta21/ITER-ASSIGNMENTS/tree/master/Sem-3](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/Third%20Semester))
+> 1. [First Semester]([https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/First%20Semester])
+> 2. [Second Semester]([https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/Second%20Semester])
+> 3. [Third Semester]([https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/Third%20Semester])
 
 ![loading](https://github.githubassets.com/images/spinners/octocat-spinner-64.gif)
 
