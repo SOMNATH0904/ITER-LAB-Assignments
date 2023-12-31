@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        .container { 
+            margin-top:125px; 
+            padding: 16px; 
+            background-color: antiquewhite;
+            border: 2px solid rosybrown; 
+        }
+
+        hr { 
+            border: 1px solid #f1f1f1; 
+            margin-bottom: 25px;
+        }
+
+        .btn { 
+            background-color: #48c1f1; 
+            color: black; padding: 16px 20px; 
+            margin: 8px 0; 
+            border: none; 
+            cursor: pointer; 
+            width: 100%; 
+        } 
+    </style>
+    <script>
+        $("#submit").click(function(){ 
+            alert("The Form has been Submitted.");
+        });
+    </script>
+</head>
+<body>
+    <form action="/action_page.php">
+        <div class="container">
+            <h1>Upload File</h1>
+            <p>Please upload your document.</p><hr>
+            <label for="file"><b>File</b></label> 
+            <input type="file"placeholder="Upload Required Document" name="file" id="file" required><hr>
+            <button id="submit" class="btn">Submit</button>
+            <div class="alert alert-danger"> <strong>Danger!</strong> Upload File Before Submitting.</div> 
+            <div class="progress"> 
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="background-color:blue; width:70%">70%</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

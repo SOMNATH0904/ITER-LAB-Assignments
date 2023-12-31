@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudfl are.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+    <title>Ques 8</title>
+    <style>
+        .container {
+            margin-top: 5px;
+            height: 500px;
+            width: 100%;
+            background-color: beige;
+            display: inline-block;
+        }
+        .card {
+            height: 250px;
+            width: 300px;
+            position: relative;
+            top: 50px;
+        }
+        .card img {
+            height: 200px;
+            width: 150px;
+            position: relative;
+            left: 50px;
+        }
+        form {
+            position: relative;
+            left: 270px;
+            bottom: 200px;
+    
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="width: 16rem; margin: 5px;">
+            <img class="card-img-top" src="assets/Image.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 style="text-align: center;">Somnath</h4>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="file" id="formFile">
+                <label for="formFile" class="form-label" style="font-size: 12px;">Select File < 1500 KB</label>
+            </div>
+        </div>
+        <div class="form-div">
+            <form>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="email">Email Address<sup style="color: red;">*</sup></label>
+                    <input type="text" class="form-control" style="max-width: 300px;" id="email">
+                  </div>
+                  <div class="col">
+                    <label for="pwd">Password<sup style="color: red;">*</sup></label>
+                    <input type="text" class="form-control" style="max-width: 295px;" id="pwd">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" style="max-width: 300px;" id="fname">
+                    </div>
+                    <div class="col">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" style="max-width: 295px;" id="lname">
+                    </div>
+                </div>
+                <hr>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
