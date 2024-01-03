@@ -1,6 +1,8 @@
+// Ques 2 : Insertion sort
+
 import java.util.Scanner;
 
-public class Q3 {
+public class Q2 {
 
     public static void print(int[] arr) {
         int n = arr.length;
@@ -10,18 +12,17 @@ public class Q3 {
         System.out.println();
     }
 
-    public static void selection(int[] arr) {
+    public static void insertion(int[] arr) {
         int n = arr.length;
-        for(int i = 0; i < n-1; i++) {
-            int minIdx = i;
-            for(int j = i+1; j < n; j++) {
-                if(arr[j] < arr[minIdx]) {
-                    minIdx = j;
-                }
+        for(int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i-1;
+            while(j >= 0 && arr[j] > key) {
+                int temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+                j--;
             }
-            int temp = arr[minIdx];
-            arr[minIdx] = arr[i];
-            arr[i] = temp;
         }
     }
 
@@ -36,8 +37,8 @@ public class Q3 {
         }
         System.out.println("Elements present in an array : ");
         print(arr);
-        selection(arr);
-        System.out.println("Elements after implementing Selection Sort : ");
+        insertion(arr);
+        System.out.println("Elements after implementing Insertion Sort : ");
         print(arr);
     }
 }

@@ -1,6 +1,8 @@
+// Ques 1 : Bubble Sort
+
 import java.util.Scanner;
 
-public class Q6 {
+public class Q1 {
 
     public static void print(int[] arr) {
         int n = arr.length;
@@ -10,21 +12,17 @@ public class Q6 {
         System.out.println();
     }
 
-    public static int[] MaxMin(int[] arr) {
-        int start = 0;
-        int end = arr.length-1;
-        int[] temp = new int[arr.length];
-        for(int i = 0; i < arr.length; i++) {
-            if(i % 2 == 0) {
-                temp[i] = arr[end];
-                end--;
-            }
-            else {
-                temp[i] = arr[start];
-                start++;
+    public static void bubble(int[] arr) {
+        int n = arr.length;
+        for(int i = 0; i < n-1; i++) {
+            for(int j = 0; j < n-i-1; j++) {
+                if(arr[j] > arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
             }
         }
-        return temp;
     }
 
     public static void main(String[] args) {
@@ -36,9 +34,10 @@ public class Q6 {
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        System.out.println("Elements present in an array : ");
         print(arr);
-        System.out.println("Maximum Minimum Array is : ");
-        int[] arrMaxMin = MaxMin(arr);
-        print(arrMaxMin);
+        bubble(arr);
+        System.out.println("Elements after implementing Bubble Sort : ");
+        print(arr);
     }
 }

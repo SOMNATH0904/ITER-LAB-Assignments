@@ -1,3 +1,5 @@
+// Ques 1 : Array reduction
+
 import java.util.Scanner;
 
 public class Q1 {
@@ -10,7 +12,7 @@ public class Q1 {
         System.out.println();
     }
 
-    public static void bubble(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for(int i = 0; i < n-1; i++) {
             for(int j = 0; j < n-i-1; j++) {
@@ -21,6 +23,21 @@ public class Q1 {
                 }
             }
         }
+    }
+
+    public static void arrayReduction(int[] arr) {
+        bubbleSort(arr);
+        int n = arr.length;
+        int count = 1;
+        int reduction = arr[0];
+        for(int i = 0; i < n; i++) {
+            if(arr[i]-reduction > 0) {
+                System.out.println(n-i);
+                reduction = arr[i];
+                count++;
+            }
+        }
+        System.out.println("Total count of Array Reduction : "+count);
     }
 
     public static void main(String[] args) {
@@ -34,8 +51,6 @@ public class Q1 {
         }
         System.out.println("Elements present in an array : ");
         print(arr);
-        bubble(arr);
-        System.out.println("Elements after implementing Bubble Sort : ");
-        print(arr);
+        arrayReduction(arr);
     }
 }

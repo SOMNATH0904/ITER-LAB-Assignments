@@ -1,6 +1,8 @@
+// Ques 3 : Selection sort
+
 import java.util.Scanner;
 
-public class Q1 {
+public class Q3 {
 
     public static void print(int[] arr) {
         int n = arr.length;
@@ -10,32 +12,19 @@ public class Q1 {
         System.out.println();
     }
 
-    public static void bubbleSort(int[] arr) {
+    public static void selection(int[] arr) {
         int n = arr.length;
         for(int i = 0; i < n-1; i++) {
-            for(int j = 0; j < n-i-1; j++) {
-                if(arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+            int minIdx = i;
+            for(int j = i+1; j < n; j++) {
+                if(arr[j] < arr[minIdx]) {
+                    minIdx = j;
                 }
             }
+            int temp = arr[minIdx];
+            arr[minIdx] = arr[i];
+            arr[i] = temp;
         }
-    }
-
-    public static void arrayReduction(int[] arr) {
-        bubbleSort(arr);
-        int n = arr.length;
-        int count = 1;
-        int reduction = arr[0];
-        for(int i = 0; i < n; i++) {
-            if(arr[i]-reduction > 0) {
-                System.out.println(n-i);
-                reduction = arr[i];
-                count++;
-            }
-        }
-        System.out.println("Total count of Array Reduction : "+count);
     }
 
     public static void main(String[] args) {
@@ -49,6 +38,8 @@ public class Q1 {
         }
         System.out.println("Elements present in an array : ");
         print(arr);
-        arrayReduction(arr);
+        selection(arr);
+        System.out.println("Elements after implementing Selection Sort : ");
+        print(arr);
     }
 }

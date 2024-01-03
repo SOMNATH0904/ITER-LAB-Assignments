@@ -1,3 +1,5 @@
+// Ques 2 : Merging two sorted arrays
+
 import java.util.Scanner;
 
 public class Q2 {
