@@ -1,6 +1,6 @@
 // Question 9 : Write a program to check whether a number is palindrome or not.
 
-public class Q9 {
+public class Q09 {
 
     public static boolean isPalindrome(int n) {
         if(n < 0 || (n != 0 && n % 10 == 0)) {

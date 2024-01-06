@@ -1,6 +1,6 @@
 // Question 1 : Write a java program to count the number of bits that are set to 1 in an integer.
 
-public class Q1 {
+public class Q01 {
 
     static int countBits(int n)
     {

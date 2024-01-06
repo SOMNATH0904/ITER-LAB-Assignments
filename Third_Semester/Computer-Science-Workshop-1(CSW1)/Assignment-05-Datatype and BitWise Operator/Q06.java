@@ -1,6 +1,6 @@
 // Question 6 : Write a java program to compute x/y without arithmetic operators.
 
-public class Q6 {
+public class Q06 {
 
     public static int divide(int x, int y) {
         if (y == 0 || (x == Integer.MIN_VALUE && y == -1)) {

@@ -1,6 +1,6 @@
 // Question 3 : Write a program to swap the ith bit with jth bit of a number.
 
-public class Q3 {
+public class Q03 {
 
     public static int swapBits(int num, int i, int j) {
         int ithBit = (num >> i) & 1;

@@ -1,6 +1,6 @@
 // Question 5 : Write a java program to compute x * y with arithmetic operators.
 
-public class Q5 {
+public class Q05 {
 
     public static int multiply(int x, int y) {
         int result = 0;

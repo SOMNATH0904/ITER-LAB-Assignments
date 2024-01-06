@@ -1,6 +1,6 @@
 // Question 2 : The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0. Write a java program to count the parity of an integer number.
 
-public class Q2 {
+public class Q02 {
 
     public static int countBits(int n) {
         int count = 0;

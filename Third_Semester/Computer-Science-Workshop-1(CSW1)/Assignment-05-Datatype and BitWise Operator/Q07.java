@@ -1,6 +1,6 @@
 // Question 7 : Write a program to find x to the power y.
 
-public class Q7 {
+public class Q07 {
 
     public static long power(int x, int y) {
         long result = 1;
