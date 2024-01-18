@@ -82,11 +82,11 @@ public class QueueUsingArray {
                     break;
 
                 case 4 :
-                    System.out.println("Is the Stack is Empty : "+isEmpty());
+                    System.out.println("Is the Queue is Empty : "+isEmpty());
                     break;
 
                 case 5 :
-                    System.out.println("Is the Stack is Full : "+isFull());
+                    System.out.println("Is the Queue is Full : "+isFull());
                     break;
 
                 default :
