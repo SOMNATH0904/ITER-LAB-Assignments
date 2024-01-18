@@ -1,48 +1,46 @@
 // Ques 3 : Check reverse
 
-class Q3 {
+public class Q3 { 
+	
+  static void reverse(int[] a,int x,int y) { 
+	while(x<y) { 
+      int temp = a[x]; 
+      a[x] = a[y]; 
+      a[y] = temp; 
+      x++; 
+      y--; 
+    } 
+  } 
+	
+ static boolean sortArr(int[] a, int n) { 
+	 int x = -1; 
+	 int y = -1;
+	 for(int i = 0; i < n - 1; i++) { 
+		 if (a[i] > a[i + 1]) { 
+			 if (x == -1) { 
+				 x = i; 
+			 }
+			 y = i + 1; 
+		 }
+	 }
+	 if (x != -1) { 
+		 reverse(a,x,y); 
+		 for (int i = 0; i < n - 1; i++) { 
+			 if (a[i] > a[i + 1]) { 
+				 return false; 
+			 }
+		 } 
+	 } 
+	 return true; 
+  } 
 
-	static boolean checkReverse(int arr[], int n) { 
-		if (n == 1) { 
-			return true; 
-		}
-		int i; 
-		for (i = 1; arr[i - 1] < arr[i] && i < n; i++); 
-		if (i == n) { 
-			return true; 
-		}
-		int j = i; 
-		while (j < n && arr[j] < arr[j - 1]) { 
-			if (i > 1 && arr[j] < arr[i - 2]) { 
-				return false; 
-			} 
-			j++; 
-		}
-		if (j == n) return true; 
-		int k = j;
-		if (arr[k] < arr[i - 1]) { 
-			return false; 
-		} 
-
-		while (k > 1 && k < n) { 
-			if (arr[k] < arr[k - 1]) { 
-				return false; 
-			} 
-			k++; 
-		} 
-		return true; 
-	} 
-
-	public static void main(String[] args) { 
-
-		int arr[] = {1, 3, 4, 10, 9, 8}; 
-		int n = arr.length; 
-
-		if (checkReverse(arr, n)) { 
-			System.out.print("True"); 
-		} else { 
-			System.out.print("False"); 
-		} 
-	} 
-	} 
+  public static void main (String[] args) { 
+    int arr[] = { 1, 2, 5, 4, 3 }; 
+    int n = arr.length;	  
+    if(sortArr(arr, n)) { 
+	    System.out.println("True"); 
+    } else {
+	    System.out.println("False"); 
+    } 
+  } 
 } 
