@@ -1,6 +1,6 @@
 // Ques 4 : Given an array of integers, find the element pair with minimum/maximum difference
 
-// Pair with Maximum Difference Approach
+// Pair with Minimum Difference Approach
 
 public class Q4 {
 
