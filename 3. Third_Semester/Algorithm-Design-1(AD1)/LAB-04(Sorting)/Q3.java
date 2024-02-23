@@ -44,5 +44,4 @@ class Q3 {
 			System.out.print("False"); 
 		} 
 	} 
-	} 
 } 
