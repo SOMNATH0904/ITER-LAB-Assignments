@@ -3,7 +3,7 @@
 # ITER ASSIGNMENTS
 𝐇𝐞𝐥𝐥𝐨 𝐭𝐡𝐞𝐫𝐞! <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="50px">
 <ol>
-  <li>This Repo contains all the ITER Assignment which we get in our college as now I am in 3rd semester so till date all assigment which we got are updated.</li>
+  <li>This Repo contains all the ITER Assignment which we get in our college as now I am in 4th Semester so till date all assigment which we got are updated.</li>
   <li>If any correction or suggestion is required then PRs are most welcomed.</li>
   <li>I dont promote any cheating for the assignments.</li>
 </ol>
