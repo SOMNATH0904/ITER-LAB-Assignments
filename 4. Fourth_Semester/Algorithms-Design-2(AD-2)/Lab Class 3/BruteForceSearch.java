@@ -1,3 +1,7 @@
+/**
+ * Ques 1 : Write a Java Program to implement brute force for pattern matching in a String.
+ */
+
 public class BruteForceSearch {
 
     public static int bruteForceSearch(String textIn, String patternIn) {

@@ -1,3 +1,7 @@
+/**
+ * Ques 2 : Write a Java Program to implement Robin-Karp Algorithm for pattern searching in a string.
+ */
+
 public class RobinKarpAlgorithm {
 
     public static int robinkarp(String textIn, String patternIn) {
