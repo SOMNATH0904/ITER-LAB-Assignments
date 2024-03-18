@@ -18,7 +18,7 @@ class Car1 implements Vehicle {
     }
 
     public void accelerate(int speed, int duration) {
-        System.out.println("Car is accelerating to "+speed+" km/h for "+duration+" seconds");
+        System.out.println("Car is accelerating to "+speed+" km/h for "+duration+" seconds.");
     }
 }
 

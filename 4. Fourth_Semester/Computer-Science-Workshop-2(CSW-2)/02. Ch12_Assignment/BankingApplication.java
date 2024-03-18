@@ -41,7 +41,7 @@ class CurrentAccount extends Account {
 
     void deposit() {
         int interest = getBalance() * overDLimit;
-        System.out.println("The Amount Deposited is : "+interest);
+        System.out.println("Amount Deposited is : "+interest);
     }
     
     void withdraw() {

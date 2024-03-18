@@ -64,9 +64,9 @@ class Course {
     static Scanner sc = new Scanner(System.in);
 
     public Course() {
-        System.out.print("Enter Course name:");
+        System.out.print("Enter Course name :");
         this.courseName = sc.next();
-        System.out.print("Enter Course code:");
+        System.out.print("Enter Course code :");
         this.codeString = sc.next();
     }
 

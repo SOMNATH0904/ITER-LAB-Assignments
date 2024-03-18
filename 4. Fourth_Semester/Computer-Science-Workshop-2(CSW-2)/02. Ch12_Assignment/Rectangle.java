@@ -37,7 +37,7 @@ public class Rectangle {
         System.out.println("Length : "+rectangle.getLength());
         System.out.println("Width : "+rectangle.getWidth());
 
-        System.out.println("Area of Rectangle is : "+rectangle.calculateArea());
-        System.out.println("Perimeter of Rectangle is : "+rectangle.calculatePerimeter());
+        System.out.println("The Area of Rectangle is : "+rectangle.calculateArea());
+        System.out.println("The Perimeter of Rectangle is : "+rectangle.calculatePerimeter());
     }
 }

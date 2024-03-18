@@ -43,10 +43,10 @@ public class Point {
         point1.setY(6);
 
         System.out.println("After modification -->");
-        System.out.println("Original point coordinates ->");
+        System.out.println("Original point coordinates are ->");
         System.out.println("X: "+point1.getX());
         System.out.println("Y: "+point1.getY());
-        System.out.println("Copied point coordinates ->");
+        System.out.println("Copied point coordinates are ->");
         System.out.println("X: "+point2.getX());
         System.out.println("Y: "+point2.getY());
     }

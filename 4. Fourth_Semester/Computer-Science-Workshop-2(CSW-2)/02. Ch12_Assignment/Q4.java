@@ -11,7 +11,7 @@ class Laptop {
     }
 
     String printString() {
-        return "Laptop Model: "+model+", Price: $"+price;
+        return "Laptop Model : "+model+", Price : $"+price;
     }
 }
 

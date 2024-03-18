@@ -26,7 +26,7 @@ class Car {
 
 public class CarTester {
     public static void main(String[] args) {
-        Car myCar1 = new Car("Tata", "Nexon");     // My Favourite hehehehe ...
+        Car myCar1 = new Car("Tata", "Nexon");     // My Favourite hehehe ...
 
         Car myCar2 = new Car(null, null);
 

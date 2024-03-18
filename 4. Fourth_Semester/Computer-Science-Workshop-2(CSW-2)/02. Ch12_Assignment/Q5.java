@@ -52,7 +52,7 @@ public class Q5 {
         System.out.println("Student Information -->");
         System.out.println("Student 1 -> ");
         student1.displayStudentInfo();
-        System.out.println("Student 2 -> ");
+        System.out.println("Student 2 --> ");
         student2.displayStudentInfo();
     }
 }

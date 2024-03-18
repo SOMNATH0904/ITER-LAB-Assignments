@@ -69,7 +69,7 @@ class Magazine extends LibraryResource {
 
     @Override
     void displayDetails() {
-        System.out.println("Magazine Title : "+getTitle());
+        System.out.println("Magazine Title is : "+getTitle());
         System.out.println("Author : "+getAuthor());
         System.out.println("Issue Date : "+getIssueDate());
         System.out.println();
