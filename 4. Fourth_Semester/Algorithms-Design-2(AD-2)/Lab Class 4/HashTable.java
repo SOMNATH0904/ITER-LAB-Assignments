@@ -7,34 +7,31 @@ public class HashTable {
         table = new HashMap<>();
     }
 
-    // Method to insert a string into the hash table
     public void insert(String str) {
         if (str == null) {
             return;
         }
-        str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        str = str.toLowerCase();
         if (table.containsKey(str)) {
-            table.put(str, table.get(str) + 1); // Increment frequency if already exists
+            table.put(str, table.get(str) + 1);
         } else {
-            table.put(str, 1); // Add new entry with frequency 1
+            table.put(str, 1);
         }
     }
 
-    // Method to search for a string in the hash table
     public boolean search(String str) {
         if (str == null) {
             return false;
         }
-        str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        str = str.toLowerCase(); 
         return table.containsKey(str);
     }
 
-    // Method to get the frequency of a string in the hash table
     public int getFrequency(String str) {
         if (str == null) {
             return 0;
         }
-        str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        str = str.toLowerCase();
         return table.getOrDefault(str, 0);
     }
 
@@ -45,11 +42,11 @@ public class HashTable {
         hashTable.insert("apple");
         hashTable.insert("orange");
 
-        System.out.println("Frequency of 'apple': " + hashTable.getFrequency("apple")); // Output: 2
-        System.out.println("Frequency of 'banana': " + hashTable.getFrequency("banana")); // Output: 1
-        System.out.println("Frequency of 'grape': " + hashTable.getFrequency("grape")); // Output: 0
+        System.out.println("Frequency of 'apple': " + hashTable.getFrequency("apple")); 
+        System.out.println("Frequency of 'banana': " + hashTable.getFrequency("banana")); 
+        System.out.println("Frequency of 'grape': " + hashTable.getFrequency("grape")); 
 
-        System.out.println("Search 'apple': " + hashTable.search("apple")); // Output: true
-        System.out.println("Search 'mango': " + hashTable.search("mango")); // Output: false
+        System.out.println("Search 'apple': " + hashTable.search("apple")); 
+        System.out.println("Search 'mango': " + hashTable.search("mango"));
     }
 }
