@@ -1,3 +1,7 @@
+/**
+ * Ques 1 : Write a java program to implement Binary Search Tree to store strings and its frequencies. Define methods for insertion of String, Searching a string and returning frequency of the string.
+ */
+
 class Node {
     String data;
     int frequency;

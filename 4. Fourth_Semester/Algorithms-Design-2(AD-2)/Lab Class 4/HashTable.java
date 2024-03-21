@@ -1,3 +1,7 @@
+/**
+ * Ques 2 : Write a java program to implement Hash table to store strings and its frequencies. Define methods for insertion of String, Searching a string and returning frequency of the string.
+ */
+
 import java.util.HashMap;
 
 public class HashTable {
