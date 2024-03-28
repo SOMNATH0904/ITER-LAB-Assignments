@@ -38,26 +38,28 @@
  * Get the frequency of another string and print it.
  */
 
+import java.util.Scanner;
+
 class Node {
     String data;
     int frequency;
     Node left, right;
 
-    public Node(String item) {
-        data = item;
+    Node(String value) {
+        data = value;
         frequency = 1;
         left = right = null;
     }
 }
 
-public class BinarySearchTree {
+class BST {
     private Node root;
 
-    BinarySearchTree() {
+    BST() {
         root = null;
     }
 
-    public void insert(String data) {
+    void insert(String data) {
         root = insertRec(root, data);
     }
 
@@ -67,18 +69,19 @@ public class BinarySearchTree {
             return root;
         }
 
-        int cmp = data.compareTo(root.data);
-        if (cmp < 0)
+        int compareResult = data.compareTo(root.data);
+
+        if (compareResult < 0)
             root.left = insertRec(root.left, data);
-        else if (cmp > 0)
+        else if (compareResult > 0)
             root.right = insertRec(root.right, data);
-        else
+        else // If the string is already present, increment its frequency
             root.frequency++;
 
         return root;
     }
 
-    public boolean search(String data) {
+    boolean search(String data) {
         return searchRec(root, data);
     }
 
@@ -86,16 +89,17 @@ public class BinarySearchTree {
         if (root == null)
             return false;
 
-        int cmp = data.compareTo(root.data);
-        if (cmp < 0)
+        int compareResult = data.compareTo(root.data);
+
+        if (compareResult < 0)
             return searchRec(root.left, data);
-        else if (cmp > 0)
+        else if (compareResult > 0)
             return searchRec(root.right, data);
         else
             return true;
     }
 
-    public int getFrequency(String data) {
+    int getFrequency(String data) {
         return getFrequencyRec(root, data);
     }
 
@@ -103,39 +107,140 @@ public class BinarySearchTree {
         if (root == null)
             return 0;
 
-        int cmp = data.compareTo(root.data);
-        if (cmp < 0)
+        int compareResult = data.compareTo(root.data);
+
+        if (compareResult < 0)
             return getFrequencyRec(root.left, data);
-        else if (cmp > 0)
+        else if (compareResult > 0)
             return getFrequencyRec(root.right, data);
         else
             return root.frequency;
     }
+}
 
+public class BinarySearchTree {
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
+        Scanner scanner = new Scanner(System.in);
+        BST bst = new BST();
+        boolean exit = false;
 
-        tree.insert("apple");
-        tree.insert("banana");
-        tree.insert("apple");
-        tree.insert("orange");
-        tree.insert("banana");
+        while (!exit) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Insert a string");
+            System.out.println("2. Search for a string");
+            System.out.println("3. Get frequency of a string");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
 
-        System.out.println("Search result for 'apple': " + tree.search("apple"));
-        System.out.println("Search result for 'grape': " + tree.search("grape"));
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
 
-        System.out.println("Frequency of 'apple': " + tree.getFrequency("apple"));
-        System.out.println("Frequency of 'banana': " + tree.getFrequency("banana"));
-        System.out.println("Frequency of 'grape': " + tree.getFrequency("grape"));
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter the string to insert: ");
+                    String insertString = scanner.nextLine();
+                    bst.insert(insertString);
+                    System.out.println("String inserted successfully.");
+                    break;
+                case 2:
+                    System.out.print("Enter the string to search: ");
+                    String searchString = scanner.nextLine();
+                    if (bst.search(searchString))
+                        System.out.println("String found.");
+                    else
+                        System.out.println("String not found.");
+                    break;
+                case 3:
+                    System.out.print("Enter the string to get frequency: ");
+                    String freqString = scanner.nextLine();
+                    int frequency = bst.getFrequency(freqString);
+                    System.out.println("Frequency of the string: " + frequency);
+                    break;
+                case 4:
+                    exit = true;
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+        }
+        scanner.close();
     }
 }
 
+
 /**
- * OUTPUT :
+ * OUTPUT
  * 
- * Search result for 'apple': true
- * Search result for 'grape': false
- * Frequency of 'apple': 2
- * Frequency of 'banana': 2
- * Frequency of 'grape': 0
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 1
+Enter the string to insert: Hello
+String inserted successfully.
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 3
+Enter the string to get frequency: Hello
+Frequency of the string: 1
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 1
+Enter the string to insert: hello
+String inserted successfully.
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 1
+Enter the string to insert: Hello
+String inserted successfully.
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 3
+Enter the string to get frequency: hello
+Frequency of the string: 1
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 3
+Enter the string to get frequency: Hello
+Frequency of the string: 2
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 3
+Enter the string to get frequency: hello
+Frequency of the string: 1
+
+Menu:
+1. Insert a string
+2. Search for a string
+3. Get frequency of a string
+4. Exit
+Enter your choice: 4
+Exiting...
+
  */

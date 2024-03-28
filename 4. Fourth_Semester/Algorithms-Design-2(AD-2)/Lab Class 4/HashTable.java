@@ -45,65 +45,131 @@
  * Searches for frequencies of specific strings and prints the results.
  */
 
-import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Scanner;
 
 public class HashTable {
-    private HashMap<String, Integer> table;
+    private Hashtable<String, Integer> hashTable;
 
     public HashTable() {
-        table = new HashMap<>();
+        hashTable = new Hashtable<>();
     }
 
-    public void insert(String str) {
-        if (str == null) {
-            return;
-        }
-        str = str.toLowerCase();
-        if (table.containsKey(str)) {
-            table.put(str, table.get(str) + 1);
+    public void insertString(String str) {
+        if (hashTable.containsKey(str)) {
+            hashTable.put(str, hashTable.get(str) + 1);
         } else {
-            table.put(str, 1);
+            hashTable.put(str, 1);
+        }
+        System.out.println("String '" + str + "' inserted successfully.");
+    }
+
+    public void searchString(String str) {
+        if (hashTable.containsKey(str)) {
+            System.out.println("String '" + str + "' found in the hash table.");
+        } else {
+            System.out.println("String '" + str + "' not found in the hash table.");
         }
     }
 
-    public boolean search(String str) {
-        if (str == null) {
-            return false;
+    public void getStringFrequency(String str) {
+        if (hashTable.containsKey(str)) {
+            System.out.println("Frequency of '" + str + "' in the hash table: " + hashTable.get(str));
+        } else {
+            System.out.println("String '" + str + "' not found in the hash table.");
         }
-        str = str.toLowerCase(); 
-        return table.containsKey(str);
-    }
-
-    public int getFrequency(String str) {
-        if (str == null) {
-            return 0;
-        }
-        str = str.toLowerCase();
-        return table.getOrDefault(str, 0);
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         HashTable hashTable = new HashTable();
-        hashTable.insert("apple");
-        hashTable.insert("banana");
-        hashTable.insert("apple");
-        hashTable.insert("orange");
 
-        System.out.println("Frequency of 'apple': " + hashTable.getFrequency("apple")); 
-        System.out.println("Frequency of 'banana': " + hashTable.getFrequency("banana")); 
-        System.out.println("Frequency of 'grape': " + hashTable.getFrequency("grape")); 
+        int ch;
+        String inputString;
 
-        System.out.println("Search 'apple': " + hashTable.search("apple")); 
-        System.out.println("Search 'mango': " + hashTable.search("mango"));
+        do {
+            System.out.println("\n----- Menu -----");
+            System.out.println("1. Insert String");
+            System.out.println("2. Search String");
+            System.out.println("3. Get String Frequency");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            ch = scanner.nextInt();
+            scanner.nextLine();
+
+            switch(ch) {
+                case 1:
+                    System.out.print("Enter string to insert: ");
+                    inputString = scanner.nextLine();
+                    hashTable.insertString(inputString);
+                    break;
+                case 2:
+                    System.out.print("Enter string to search: ");
+                    inputString = scanner.nextLine();
+                    hashTable.searchString(inputString);
+                    break;
+                case 3:
+                    System.out.print("Enter string to get frequency: ");
+                    inputString = scanner.nextLine();
+                    hashTable.getStringFrequency(inputString);
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+            }
+        } while (ch != 4);
+
+        scanner.close();
     }
 }
 
+
 /**
- * OUTPUT :
- * 
- * Frequency of 'apple': 2
- * Frequency of 'banana': 1
- * Frequency of 'grape': 0
- * Search 'apple': true
- * Search 'mango': false
+ *  OUTPUT
+
+----- Menu -----
+1. Insert String
+2. Search String
+3. Get String Frequency
+4. Exit
+Enter your choice: 1
+Enter string to insert: hello
+String 'hello' inserted successfully.
+
+----- Menu -----
+1. Insert String
+2. Search String
+3. Get String Frequency
+4. Exit
+Enter your choice: 1
+Enter string to insert: somnath
+String 'somnath' inserted successfully.
+
+----- Menu -----
+1. Insert String
+2. Search String
+3. Get String Frequency
+4. Exit
+Enter your choice: 2
+Enter string to search: hello
+String 'hello' found in the hash table.
+
+----- Menu -----
+1. Insert String
+2. Search String
+3. Get String Frequency
+4. Exit
+Enter your choice: 3
+Enter string to get frequency: somnath
+Frequency of 'somnath' in the hash table: 1
+
+----- Menu -----
+1. Insert String
+2. Search String
+3. Get String Frequency
+4. Exit
+Enter your choice: 4
+Exiting...
  */
