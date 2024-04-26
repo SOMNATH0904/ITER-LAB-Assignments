@@ -5,7 +5,28 @@
 /**
  * ALGORITHM
  * 
- * 
+ * MergeSort(array)
+    if length of array <= 1
+        return array
+    else
+        mid = length of array / 2
+        left_half = MergeSort(first half of array)
+        right_half = MergeSort(second half of array)
+        return Merge(left_half, right_half)
+
+   Merge(left, right)
+    merged_array = []
+    while left is not empty and right is not empty
+        if first element of left <= first element of right
+            append first element of left to merged_array
+            remove first element of left
+        else
+            append first element of right to merged_array
+            remove first element of right
+    append remaining elements of left to merged_array
+    append remaining elements of right to merged_array
+    return merged_array
+
  */
 
 /**

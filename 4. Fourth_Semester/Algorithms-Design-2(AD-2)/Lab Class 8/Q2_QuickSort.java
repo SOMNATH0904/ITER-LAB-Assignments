@@ -4,8 +4,22 @@
 
 /**
  * ALGORITHM
- * 
- * 
+   QuickSort(array, low, high)
+    if low < high
+        pivot_index = Partition(array, low, high)
+        QuickSort(array, low, pivot_index - 1)
+        QuickSort(array, pivot_index + 1, high)
+
+   Partition(array, low, high)
+    pivot = array[high]
+    i = low - 1
+    for j = low to high - 1
+        if array[j] <= pivot
+            i++
+            swap array[i] and array[j]
+    swap array[i + 1] and array[high]
+    return i + 1
+
  */
 
 /**
