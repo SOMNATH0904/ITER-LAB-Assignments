@@ -4,6 +4,7 @@
 
 /**
  * ALGORITHM
+ 
    QuickSort(array, low, high)
     if low < high
         pivot_index = Partition(array, low, high)

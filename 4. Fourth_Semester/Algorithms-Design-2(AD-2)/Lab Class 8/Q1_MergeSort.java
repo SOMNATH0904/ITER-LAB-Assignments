@@ -4,8 +4,8 @@
 
 /**
  * ALGORITHM
- * 
- * MergeSort(array)
+ 
+   MergeSort(array)
     if length of array <= 1
         return array
     else
