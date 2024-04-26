@@ -1,22 +1,24 @@
-public class Q03 extends RuntimeException {
-
-    public Q03(String msg) {
-        super(msg);
+class CustomNullPointerException extends NullPointerException {
+    public CustomNullPointerException(String message) {
+        super(message);
     }
+}
 
+public class Q03 {
     public static void main(String[] args) {
-        String input = null;
         try {
-            if(input == null) {
-                throw new Q3("Input string is null!");
+            String str = null;
+            if (str == null) {
+                throw new CustomNullPointerException("Custom Null Pointer Exception: nullString is null");
             }
-        } catch (Q03 e) {
-            System.err.println("CustomNullPointerException occurred : "+e.getMessage());
+        } catch (CustomNullPointerException e) {
+            System.out.println("Caught Custom Null Pointer Exception: " + e.getMessage());
         }
     }
 }
 
+
 /**
  * OUTPUT
- * CustomNullPointerException occurred : Input string is null!
+ * Caught Custom Null Pointer Exception: Custom Null Pointer Exception: nullString is null
  */

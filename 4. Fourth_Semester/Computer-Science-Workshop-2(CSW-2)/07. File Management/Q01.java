@@ -38,7 +38,6 @@ public class Q01 {
  *
  * Enter your diary entry:
  * Hello Lady, Wanna go out with me ?
- * File already exists. Appending to existing file.
  * Entry added to diary.
  *
  * IF FILE IS ALREADY CREATED WITH ANY DATA, THEN THE OUTPUT WILL COME AS -->
