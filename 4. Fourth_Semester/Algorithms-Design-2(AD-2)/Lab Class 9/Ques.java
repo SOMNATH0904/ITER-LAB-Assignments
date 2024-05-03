@@ -1,6 +1,5 @@
 /**
- * Ques : Write a Java Program to count the number of inversions in an array using MergeSort. Display the 
- *        pairs of inversions and the number of inversions.
+ * Ques : Write a Java Program to count the number of inversions in an array using MergeSort. Display the pairs of inversions and the number of inversions.
  */
 
 /**
