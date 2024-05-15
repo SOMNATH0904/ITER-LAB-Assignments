@@ -1,3 +1,5 @@
+// LAB 5 OBJECTIVE 1
+
 .global _start
 _start:
 	
