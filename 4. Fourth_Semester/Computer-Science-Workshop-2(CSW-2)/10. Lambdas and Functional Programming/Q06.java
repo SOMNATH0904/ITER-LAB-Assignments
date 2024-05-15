@@ -6,24 +6,30 @@
  * CODE
  */
 
-import java.util.function.Function;
+interface SquaringFunction {
+    int square(int x);
+}
 
 public class Q06 {
-    public static void main(String[] args) {
-        Function<Integer, Integer> squareFunction = createSquareFunction();
-
-        System.out.println("Square of 5 : "+squareFunction.apply(5));
-        System.out.println("Square of 8 : "+squareFunction.apply(8));
-    }
-
-    public static Function<Integer, Integer> createSquareFunction() {
+    public static SquaringFunction getSquareFunction() {
         return x -> x * x;
     }
+
+    public static void main(String[] args) {
+        SquaringFunction squareFunction = getSquareFunction();
+
+        // Demonstrate the use of the returned function to calculate squares
+        System.out.println("Square of 5: " + squareFunction.square(5));
+        System.out.println("Square of 8: " + squareFunction.square(8));
+        System.out.println("Square of -3: " + squareFunction.square(-3));
+    }
 }
+
 
 /**
  * OUTPUT
  * 
- * Square of 5 : 25
- * Square of 8 : 64
+ * Square of 5: 25
+ * Square of 8: 64
+ * Square of -3: 9
  */

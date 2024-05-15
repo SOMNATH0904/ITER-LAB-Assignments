@@ -6,26 +6,34 @@
  * CODE
  */
 
-import java.util.function.Function;
+interface FactorialCalculator {
+    int calculate(int n);
+}
 
 public class Q07 {
     public static void main(String[] args) {
-        Function<Integer, Integer> factorial = n -> factorial(n);
+        FactorialCalculator factorialCalculator = calculateFactorial();
         
         int number = 5;
-        System.out.println("Factorial of " + number + ": " + factorial.apply(number));
+        int factorial = factorialCalculator.calculate(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
     }
 
-    public static int factorial(int n) {
-        if (n == 0 || n == 1)
-            return 1;
-        else
-            return n * factorial(n - 1);
+    private static FactorialCalculator calculateFactorial() {
+        FactorialCalculator finalFactorialCalculator = n -> {
+            if (n == 0 || n == 1) {
+                return 1;
+            } else {
+                return n * calculateFactorial().calculate(n - 1);
+            }
+        };
+        return finalFactorialCalculator;
     }
 }
+
 
 /**
  * OUTPUT
  * 
- * Factorial of 5: 120
+ * Factorial of 5 is: 120
  */

@@ -9,20 +9,65 @@
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class Q03 {
-    public static void main(String[] args) {
-        Supplier<Stream<Integer>> primes = () ->
-            Stream.iterate(2, n -> n + 1)
-                    .filter(Q03::isPrime);
-
-        System.out.println("Prime Numbers are : ");
-        primes.get().limit(10).forEach(System.out::println);
+interface LazySequence<T> extends Supplier<T> {
+    default LazySequence<T> tail() {
+        return (LazySequence<T>) get();
     }
 
-    public static boolean isPrime(int n) {
-        if (n <= 1) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
+    default boolean isEmpty() {
+        return false;
+    }
+}
+
+public class Q03 {
+    public static void main(String[] args) {
+        LazySequence<Integer> primes = primes(); 
+        System.out.println("First 10 prime numbers:");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(primes.get() + " ");
+            primes = primes.tail();
+        }
+    }
+    private static LazySequence<Integer> primes() {
+        return new LazySequence<Integer>() {
+            @Override
+            public Integer get() {
+                return Stream.iterate(2, n -> n + 1)
+                        .filter(Q03::isPrime)
+                        .findFirst()
+                        .orElseThrow();
+            }
+
+            @Override
+            public LazySequence<Integer> tail() {
+                return primes(get() + 1);
+            }
+        };
+    }
+
+    private static LazySequence<Integer> primes(int start) {
+        return new LazySequence<Integer>() {
+            @Override
+            public Integer get() {
+                return Stream.iterate(start, n -> n + 1)
+                        .filter(Q03::isPrime)
+                        .findFirst()
+                        .orElseThrow();
+            }
+
+            @Override
+            public LazySequence<Integer> tail() {
+                return primes(get() + 1);
+            }
+        };
+    }
+    
+    private static boolean isPrime(int num) {
+        if (num <= 1) return false;
+        if (num <= 3) return true;
+        if (num % 2 == 0 || num % 3 == 0) return false;
+        for (int i = 5; i * i <= num; i = i + 6) {
+            if (num % i == 0 || num % (i + 2) == 0) return false;
         }
         return true;
     }
@@ -31,15 +76,6 @@ public class Q03 {
 /**
  * OUTPUT
  * 
- * Prime Numbers are : 
- * 2
- * 3
- * 5
- * 7
- * 11
- * 13
- * 17
- * 19
- * 23
- * 29
+ * First 10 prime numbers:
+ * 2 3 5 7 11 13 17 19 23 29 
  */

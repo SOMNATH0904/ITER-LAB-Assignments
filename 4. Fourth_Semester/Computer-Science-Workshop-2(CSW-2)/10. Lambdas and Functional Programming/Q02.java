@@ -8,27 +8,40 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+
+interface StringComparator {
+    int compare(String s1, String s2);
+}
 
 public class Q02 {
     public static void main(String[] args) {
         List<String> strings = new ArrayList<>();
-        strings.add("banana");
         strings.add("apple");
-        strings.add("cherry");
-        strings.add("date");
+        strings.add("banana");
+        strings.add("orange");
+        strings.add("grape");
+        strings.add("kiwi");
 
-        Comparator<String> lengthComparator = (str1, str2) -> Integer.compare(str2.length(), str1.length());
+        StringComparator lengthComparator = (s1, s2) -> Integer.compare(s2.length(), s1.length());
 
-        Collections.sort(strings, lengthComparator);
+        Collections.sort(strings, (s1, s2) -> lengthComparator.compare(s1, s2));
 
-        System.out.println("Sorted strings by length(Descending Order): "+strings);
+        System.out.println("Sorted list in descending order of length:");
+        for (String str : strings) {
+            System.out.println(str);
+        }
     }
 }
+
 
 /**
  * OUTPUT
  * 
- * Sorted strings by length (descending order): [banana, cherry, apple, date]
+ * Sorted list in descending order of length:
+ * banana
+ * orange
+ * apple
+ * grape
+ * kiwi
  */
