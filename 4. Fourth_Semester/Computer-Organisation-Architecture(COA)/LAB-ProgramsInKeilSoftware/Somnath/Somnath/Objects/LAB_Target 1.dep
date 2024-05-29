@@ -1,0 +1,2 @@
+Dependencies for Project 'LAB', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Prog2.ASM)(0x665562A3)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 518"--list .\listings\prog2.lst --xref -o .\objects\prog2.o --depend .\objects\prog2.d)

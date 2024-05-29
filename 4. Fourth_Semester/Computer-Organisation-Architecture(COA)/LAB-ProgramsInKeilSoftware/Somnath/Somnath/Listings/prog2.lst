@@ -1,0 +1,91 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROG, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E59F102C        LDR              R1,=X
+    4 00000004 E59F202C        LDR              R2,=Y
+    5 00000008         
+    6 00000008 E4913004        LDR              R3,[R1],#4
+    7 0000000C E4914004        LDR              R4,[R1],#4
+    8 00000010 E0835004        ADD              R5,R3,R4
+    9 00000014 E4825004        STR              R5,[R2],#4
+   10 00000018 E0536004        SUBS             R6,R3,R4
+   11 0000001C E4826004        STR              R6,[R2],#4
+   12 00000020 E0070493        MUL              R7,R3,R4
+   13 00000024 E5827000        STR              R7,[R2]
+   14 00000028 EAFFFFFE 
+                       HERE    B                HERE
+   15 0000002C         
+   16 0000002C 00000005 
+              00000007 X       DCD              5,7
+   17 00000034         
+   18 00000034 00000000 
+              00000000         AREA             DATA1, DATA, READWRITE
+   19 00000000         
+   20 00000000 00000000 
+              00000000 
+              00000000 Y       DCD              0,0,0
+   21 0000000C                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\prog2.d -o.\objects\prog2.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
+MSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --predefi
+ne="__UVISION_VERSION SETA 518" --list=.\listings\prog2.lst Prog2.ASM
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HERE 00000028
+
+Symbol: HERE
+   Definitions
+      At line 14 in file Prog2.ASM
+   Uses
+      At line 14 in file Prog2.ASM
+Comment: HERE used once
+PROG 00000000
+
+Symbol: PROG
+   Definitions
+      At line 1 in file Prog2.ASM
+   Uses
+      None
+Comment: PROG unused
+X 0000002C
+
+Symbol: X
+   Definitions
+      At line 16 in file Prog2.ASM
+   Uses
+      At line 3 in file Prog2.ASM
+Comment: X used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA1 00000000
+
+Symbol: DATA1
+   Definitions
+      At line 18 in file Prog2.ASM
+   Uses
+      None
+Comment: DATA1 unused
+Y 00000000
+
+Symbol: Y
+   Definitions
+      At line 20 in file Prog2.ASM
+   Uses
+      At line 4 in file Prog2.ASM
+Comment: Y used once
+2 symbols
+339 symbols in table

@@ -1,0 +1,62 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PRG, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         START
+    5 00000000 E3A00004        mov              r0,#0x04
+    6 00000004 E3A01005        mov              r1,#0x05
+    7 00000008 E0802001        add              r2,r0,r1
+    8 0000000C         
+    9 0000000C EAFFFFFE 
+                       my_exit b                my_exit
+   10 00000010         END
+                       
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\prog1.d -o.\objects\prog1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
+MSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --predefi
+ne="__UVISION_VERSION SETA 518" --list=.\listings\prog1.lst Prog1.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+END 00000010
+
+Symbol: END
+   Definitions
+      At line 10 in file Prog1.asm
+   Uses
+      None
+Comment: END unused
+PRG 00000000
+
+Symbol: PRG
+   Definitions
+      At line 1 in file Prog1.asm
+   Uses
+      None
+Comment: PRG unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 4 in file Prog1.asm
+   Uses
+      None
+Comment: START unused
+my_exit 0000000C
+
+Symbol: my_exit
+   Definitions
+      At line 9 in file Prog1.asm
+   Uses
+      At line 9 in file Prog1.asm
+Comment: my_exit used once
+4 symbols
+336 symbols in table
