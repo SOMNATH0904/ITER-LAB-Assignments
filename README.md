@@ -12,7 +12,8 @@
 > 1. [First Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/1.%20First_Semester)
 > 2. [Second Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/2.%20Second_Semester)
 > 3. [Third Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/3.%20Third_Semester)
-> 4. [Fourth Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/4.%20Fourth_Semester) 
+> 4. [Fourth Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/4.%20Fourth_Semester)
+> 5. [Fifth Semester](https://github.com/SOMNATH0904/ITER-LAB-Assignments/tree/main/5.%20Fifth_Semester)
 
 ![loading](https://github.githubassets.com/images/spinners/octocat-spinner-64.gif)
 
