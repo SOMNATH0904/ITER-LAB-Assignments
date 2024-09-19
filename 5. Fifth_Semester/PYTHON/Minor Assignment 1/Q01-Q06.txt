@@ -1,0 +1,76 @@
+Ques 1. Which of the following statements is true about Python variables?
+a. Variable names can start with a number.
+b. Variables must be declared with their data types.
+c. Python variables do not need to be declared before use.
+d. Variable names can contain spaces.
+
+Ans: c. Python variables do not need to be declared before use.
+
+2. As a follow-up of Q. 1., which of the following is a correct variable name in Python?
+a. 1variable b. variable 1 c. variable_1 d. variable 1
+
+Ans: b. variable-1
+
+3. Mention 2 ways by which you can apply comments in Python.
+
+Ans: Two ways are ->
+     1. Single Line Comment : # This is a single-line comment
+     2. Multi-Line Comment : """ This is a 
+                                  multi-line comment """
+
+4. What is the difference between the 'input()' function and the 'print()' function in Python?
+
+Ans: 1. input(): This function is used to take input from the user. It waits for the user to type something and then returns that input as a string.
+        Example: name = input("Enter your name: ")
+     2. print(): This function is used to output data to the console. It displays text or variables.
+        Example: print("Hello, World!")
+
+5. How do you convert the string '123' to an integer in Python?
+a. str('123') b. int(123) c. int('123') d. float('123')
+
+Ans: c. int('123')
+
+6. Differentiate between the following operators:
+a. = and == b. / and % c. / and // d. * and **
+If there is no difference, then mention why, and if there is a difference, then justify with examples.
+
+Ans: a. = vs ==
+= (Assignment Operator): This operator assigns a value to a variable.
+Example:
+        x = 5  # Assigns the value 5 to the variable x
+        print(x)  # Output: 5
+== (Equality Comparison Operator): This operator compares two values and checks if they are equal. It returns True if they are equal and False otherwise.
+Example:
+        x = 5
+        y = 5
+        print(x == y)  # Output: True (because x is equal to y)
+
+b. / vs %
+/ (Division Operator): This operator divides the left operand by the right operand and returns the result as a floating-point number.
+Example:
+        result = 10 / 3
+        print(result)  # Output: 3.3333... (division result as a float)
+% (Modulus Operator): This operator returns the remainder of the division of the left operand by the right operand.
+Example:
+        remainder = 10 % 3
+        print(remainder)  # Output: 1 (remainder of 10 divided by 3)
+
+c. / vs //
+/ (Division Operator): As mentioned earlier, it returns the result of the division as a floating-point number.
+Example:
+        result = 10 / 3
+        print(result)  # Output: 3.3333... (float result)
+// (Floor Division Operator): This operator divides the left operand by the right operand and returns the largest integer (or floor value) that is less than or equal to the result of the division.
+Example:
+        result = 10 // 3
+        print(result)  # Output: 3 (floor value of 10 divided by 3)
+
+d. * vs **
+* (Multiplication Operator): This operator multiplies the left operand by the right operand.
+Example:
+        product = 4 * 3
+        print(product)  # Output: 12
+** (Exponentiation Operator): This operator raises the left operand to the power of the right operand.
+Example:
+        result = 2 ** 3
+        print(result)  # Output: 8 (2 raised to the power of 3)
