@@ -1,0 +1,22 @@
+Ques 2: Explain various parts of the C-code with an example.
+
+Answer: 
+#include <stdio.h>  // 1. Preprocessor Directive
+
+// 2. Main Function
+int main() {
+    // 3. Variable Declaration
+    int num1, num2, sum;
+
+    // 4. Input/Output Function (Standard Library)
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);  // 5. Reading user input
+
+    // 6. Logic (Calculation)
+    sum = num1 + num2;
+
+    // 7. Output Result
+    printf("Sum: %d\n", sum);
+
+    return 0;  // 8. Return Statement
+}

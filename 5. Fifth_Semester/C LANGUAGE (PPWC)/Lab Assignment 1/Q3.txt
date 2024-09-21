@@ -1,0 +1,11 @@
+Ques 3: Find the maximum value that can be stored in a float. Explain the reason behind it.
+
+Answer: 
+
+Maximum Value of float in C
+Maximum Value: Approximately 3.4 × 10^38 (defined as FLT_MAX).
+Reason: The float type in C uses the IEEE 754 standard, which allocates:
+-> 1 bit for the sign
+-> 8 bits for the exponent
+-> 23 bits for the mantissa
+This finite bit allocation limits the range of values that can be represented, resulting in the maximum value of about 3.4 × 10^38.

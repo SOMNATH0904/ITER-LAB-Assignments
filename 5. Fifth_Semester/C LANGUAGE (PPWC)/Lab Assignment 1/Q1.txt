@@ -1,0 +1,26 @@
+Ques 1: What is the difference between a code and an executable file? Describe the steps used to convert a C
+code to an executable file. (Write the necessary gcc command to show the working of the intermediate
+steps).
+
+Answer: Difference Between Code and Executable File
+Code (Source Code): Human-readable instructions written in a programming language like C, typically stored in .c files. Computers can't directly execute this.
+Executable File: Machine-readable binary file that can be directly run by the operating system (like .exe in Windows or a binary in Linux).
+
+Steps to Convert C Code to Executable
+1. Preprocessing: Preprocessor handles #include, #define, etc.
+               Command: gcc -E program.c -o program.i
+               Output: program.i (preprocessed file)
+
+2. Compilation: Converts preprocessed code to assembly language.
+             Command: gcc -S program.i -o program.s
+             Output: program.s (assembly file)
+
+3. Assembling: Assembler converts assembly to object code (machine-readable).
+            Command: gcc -c program.s -o program.o
+            Output: program.o (object file)
+
+4. Linking:Linker combines object files and libraries to create an executable.
+          Command: gcc program.o -o program
+          Output: program (executable file)
+
+Single-Step Command -> All steps combined: gcc program.c -o program

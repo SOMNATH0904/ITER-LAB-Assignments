@@ -1,0 +1,19 @@
+Ques 4: What does scanf() function returns. Explain the possible return values with examples.
+
+Answer: 
+1. Positive Integer: Indicates the number of successfully matched and assigned input items.
+Example: int a, b;  
+         int result = scanf("%d %d", &a, &b);  // Returns 2 if input is "10 20"
+
+2. Zero: Returned when no input items are successfully assigned due to format mismatch.
+Example: int x;
+         int result = scanf("%d", &x);  // Returns 0 if input is "abc"
+
+3. EOF (End of File): Returned when the end of input stream is reached before any successful reads (typically -1).
+Example: int y;
+         int result = scanf("%d", &y);  // Returns EOF if input ends (e.g., Ctrl+D)
+
+Summary ->
+Positive integer: Successful reads count.
+0: No valid input.
+EOF: End of input stream reached.
