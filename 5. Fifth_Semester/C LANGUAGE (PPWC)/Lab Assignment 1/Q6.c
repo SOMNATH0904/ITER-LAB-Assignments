@@ -28,23 +28,23 @@ Enter distance in meters: 12.5
 #include <stdio.h>
 
 int main() {
-    float meters, kilometers, centimeters, millimeters, feet, inches;
+    float ms, kms, cms, mms, feet, inches;
     printf("Enter distance in meters: ");
-    scanf("%f", &meters);
+    scanf("%f", &ms);
 
-    kilometers = meters * 0.001;
-    centimeters = meters * 100;
-    millimeters = meters * 1000;
-    feet = meters * 3.28084;
-    inches = meters * 39.3701;
+    kms = ms * 0.001;
+    cms = ms * 100;
+    mms = ms * 1000;
+    feet = ms * 3.28084;
+    inches = ms * 39.3701;
 
     printf("+------------------+------------------+\n");
     printf("| Unit             | Value            |\n");
     printf("+------------------+------------------+\n");
-    printf("| Meters           | %.2f             |\n", meters);
-    printf("| Kilometers       | %.5f              |\n", kilometers);
-    printf("| Centimeters      | %.2f              |\n", centimeters);
-    printf("| Millimeters      | %.2f              |\n", millimeters);
+    printf("| Meters           | %.2f             |\n", ms);
+    printf("| Kilometers       | %.5f              |\n", kms);
+    printf("| Centimeters      | %.2f              |\n", cms);
+    printf("| Millimeters      | %.2f              |\n", mms);
     printf("| Feet             | %.2f              |\n", feet);
     printf("| Inches           | %.2f              |\n", inches);
     printf("+------------------+------------------+\n");

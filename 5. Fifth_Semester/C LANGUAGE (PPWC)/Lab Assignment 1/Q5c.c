@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main(){
     char ch = 'A';
-    print("%d",sizeof(ch));
-    print("%d",sizeof('A'));
+    printf("%d\n",sizeof(ch));
+    printf("%d\n",sizeof('A'));
     return 0;
 }
 
-// Output: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
-//         print("%d", sizeof(ch));
+// Output: 1
+// 	   4
