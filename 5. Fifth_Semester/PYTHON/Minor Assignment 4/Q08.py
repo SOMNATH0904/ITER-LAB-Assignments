@@ -3,14 +3,14 @@ Ques 8: Write a function that takes n as an input and creates a list of n lists 
 five multiples of i.
 '''
 
-def cumulative_sum(numbers):
-    cumulative_list = []
-    total = 0
-    for num in numbers:
-        total += num
-        cumulative_list.append(total)
-    return cumulative_list
+def create_multiples_list(n):
+    result = []
+    for i in range(1, n+1):
+        multiples = [i * j for j in range(1, 6)] 
+        result.append(multiples)
+    return result
 
-numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
-result = cumulative_sum(numbers)
-print("Cumulative list:", result)
+n = int(input("Enter a number: "))
+multiples_list = create_multiples_list(n)
+print(multiples_list)
+
