@@ -1,11 +1,10 @@
 import math
 
 def sumSeries(x, n):
-    totalSum = 1
-    for i in range(1, n+1):
-        term = (x ** i) / math.factorial(i)
-        totalSum += term
-    return totalSum
+    total = 1
+    for i in range(1, n + 1):
+        total += (x ** i) / math.factorial(i)
+    return total
     
 x = float(input("Enter value of x :"))
 n = int(input("Enter the number of terms(n) :")) 
