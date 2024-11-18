@@ -11,7 +11,10 @@ The list is already sorted
 def is_sorted(lst):
     return lst == sorted(lst)
 
-lst = list(map(int, input("Enter list: ").split()))
+user_input = input("Enter list: ").split()
+
+lst = [int(x) for x in user_input[1:]]
+
 if is_sorted(lst):
     print("The list is already sorted")
 else:
