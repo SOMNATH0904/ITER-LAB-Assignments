@@ -2,13 +2,21 @@
 #include <ctype.h>
 
 int main() {
-    char *argv[] = {"mine", "cs", "scs", "oa", NULL};
+    char str1[] = "mine";
+    char str2[] = "cs";
+    char str3[] = "sc";
+    char str4[] = "soa";
 
-    for (int i = 0; argv[i] != NULL; i++) {
-        for (int j = 0; argv[i][j] != '\0'; j++) {
-            argv[i][j] = toupper(argv[i][j]);
+    char *argv[] = {str1, str2, str3, str4, NULL};
+
+    for (char **ptr = argv; *ptr != NULL; ptr++) {
+        for (char *ch = *ptr; *ch != '\0'; ch++) {
+            *ch = toupper(*ch); 
         }
-        printf("%s\n", argv[i]);
+    }
+
+    for (char **ptr = argv; *ptr != NULL; ptr++) {
+        printf("%s\n", *ptr);
     }
 
     return 0;
