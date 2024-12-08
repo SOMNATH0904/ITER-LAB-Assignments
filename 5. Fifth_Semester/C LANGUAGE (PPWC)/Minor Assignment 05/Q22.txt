@@ -1,0 +1,3 @@
+(i) p is a wild pointer
+(ii) r is a NULL pointer
+(v) fun() is making a memory leak

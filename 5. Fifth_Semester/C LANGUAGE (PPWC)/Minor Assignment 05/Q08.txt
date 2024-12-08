@@ -1,0 +1,9 @@
+Declaration	Description
+int process(int (*pf)(...));	process takes a function pointer as input.
+int (*fun(int, void (*)()))()	Returns a pointer to a function returning int.
+int *(*p)(int (*a)[]);	Pointer to a function returning a pointer to int.
+int (*p)[10];	Pointer to an array of 10 int.
+float *p[20];	Array of 20 pointers to float.
+int p(char *a);	Function taking char * and returning int.
+int (*p(char *a))[10];	Function returning a pointer to an array of int.
+int *(*p[10])(char *a);	Array of 10 pointers to functions returning int*.

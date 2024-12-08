@@ -1,0 +1,1 @@
+Error: `void p = b;` is invalid. `p` should be declared as `void *p`.

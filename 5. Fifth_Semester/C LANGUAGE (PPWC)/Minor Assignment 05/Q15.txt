@@ -1,0 +1,4 @@
+Output at line-4: 100
+Output at line-7: NULL
+
+Line 6 acts like `free()` to deallocate memory: Yes

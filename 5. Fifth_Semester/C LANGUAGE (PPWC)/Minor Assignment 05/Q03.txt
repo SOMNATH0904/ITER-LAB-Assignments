@@ -1,0 +1,5 @@
+Output:
+19
+
+Explanation:
+`*(*(a + **a + 2) + 3)` evaluates to `a[3][3]`, which is 19.

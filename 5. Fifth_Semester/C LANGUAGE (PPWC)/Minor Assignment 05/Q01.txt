@@ -1,0 +1,6 @@
+Output:
+24
+24
+
+Explanation:
+`arr[2][4]` and `*(*(arr + 2) + 4)` access the same element of the 2D array `arr`. The element is calculated as `10 * 2 + 4 = 24`.
