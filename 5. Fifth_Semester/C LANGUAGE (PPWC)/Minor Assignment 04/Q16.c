@@ -9,7 +9,7 @@ int main() {
     int *arrays[] = {a, b, c, d};
 
     for (int i = 0; i < 4; i++) {
-        sum[i] = arrays[0][i] + arrays[1][i] + arrays[2][i] + arrays[3][i];
+        sumArr[i] = arrays[i][0] + arrays[i][1] + arrays[i][2] + arrays[i][3];
     }
 
     for (int i = 0; i < 4; i++) {
