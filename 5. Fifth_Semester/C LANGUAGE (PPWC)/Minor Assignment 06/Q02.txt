@@ -1,0 +1,5 @@
+
+4 2
+6 2
+2 0
+Explanation: Static a in prtFun retains its value across calls, while b is reinitialized in each call.

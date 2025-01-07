@@ -1,0 +1,2 @@
+9
+Explanation: count is incremented by 2 in each write_extern() call.

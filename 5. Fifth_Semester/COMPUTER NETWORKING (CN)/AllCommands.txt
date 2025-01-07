@@ -1,0 +1,80 @@
+NAT Commands for Single Router 
+
+conf t
+int fa0/0
+ip nat inside
+int fa0/1
+ip nat outside
+exit
+ip nat inside source static 192.168.0.1 209.10.0.60
+ip nat inside source static 192.168.0.2 209.10.0.60
+ip nat inside source static 192.168.0.3 209.10.0.60
+exit
+debug ip nat
+
+
+
+NAT Commands for Double  Router 
+
+conf t
+int fa0/0
+ip nat inside
+int fa0/1
+ip nat outside
+exit
+ip nat inside source static 192.168.10.1 192.168.20.5
+ip nat inside source static 192.168.10.2 192.168.20.5
+ip nat inside source static 192.168.10.3 192.168.20.5
+exit
+debug ip nat
+
+
+
+
+DAT Commands 
+
+int fa0/0
+ip nat inside
+int fa0/1
+ip nat outside
+access-list 10 permit 192.168.10.0 0.0.0.255
+ip nat pool pool1 192.168.20.3 192.168.20.4 netmask 255.255.255.0
+ip nat inside source list 10 pool pool1
+exit
+show ip nat translations
+
+
+
+PAT Commands
+
+int fa0/0
+ip nat inside
+int fa0/1
+ip nat outside
+access-list 10 permit 192.168.10.0 0.0.0.255
+ip nat inside source list 10 int fa0/1 overload
+exit
+show ip nat translations
+
+
+
+LAB 7 Last TelNet Commands
+
+-> first inside router cli, write following commands
+line vty 0 4
+password cnlab
+enable secret network
+
+-> then, go to pc1, and command prompt, then following commands
+telnet <gateway><ex-192.168.10.5>
+cnlab
+en
+network 
+int gig0/0/0
+ip address <new_address_for_router><eg-192.168.10.6> 255.255.255.0
+
+
+
+
+
+

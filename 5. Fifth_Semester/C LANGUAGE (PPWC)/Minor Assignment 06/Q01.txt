@@ -1,0 +1,2 @@
+0 0 0 0
+Explanation: The static variable i decrements with each recursive call, printing 0 after all recursive calls complete.

@@ -1,0 +1,4 @@
+
+i=5
+j=10
+Explanation: extern keyword allows the use of the global j defined outside the main function.

@@ -1,0 +1,2 @@
+Error
+Explanation: register variable a cannot have its address taken, causing an invalid pointer operation.
