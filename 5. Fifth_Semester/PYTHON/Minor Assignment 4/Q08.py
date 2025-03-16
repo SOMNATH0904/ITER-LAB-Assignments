@@ -13,4 +13,3 @@ def create_multiples_list(n):
 n = int(input("Enter a number: "))
 multiples_list = create_multiples_list(n)
 print(multiples_list)
-

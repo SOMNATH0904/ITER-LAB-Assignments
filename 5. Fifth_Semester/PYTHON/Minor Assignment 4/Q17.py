@@ -9,12 +9,12 @@ The standard deviation is 1.55738.
 '''
 
 import math
+from statistics import mean, variance
 
 nums = list(map(float, input("Enter ten numbers: ").split()))
-print(nums)
-mean = sum(nums) / len(nums)
-variance = sum((x - mean) ** 2 for x in nums) / (len(nums) - 1)
-std_dev = math.sqrt(variance)
+mean_value = mean(nums)
+variance_value = variance(nums)
+std_dev = math.sqrt(variance_value)
 
-print(f"The mean is {mean:.2f}")
+print(f"The mean is {mean_value:.2f}")
 print(f"The standard deviation is {std_dev:.5f}")

@@ -1,0 +1,3 @@
+PassengerId,Survived,Pclass,Name,Sex,Age
+1,1,1,"Allen, Miss. Elisabeth",female,29
+2,0,3,"Moran, Mr. James",male,25

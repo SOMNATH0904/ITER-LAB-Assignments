@@ -14,6 +14,7 @@ def is_sorted(lst):
 user_input = input("Enter list: ").split()
 
 lst = [int(x) for x in user_input[1:]]
+print(lst)
 
 if is_sorted(lst):
     print("The list is already sorted")

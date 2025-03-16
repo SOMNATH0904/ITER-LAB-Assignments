@@ -3,7 +3,8 @@
 import re
 
 def is_valid_url(url):
-    pattern = r"^(https?://)?(www\.)?[a-zA-Z0-9\-]+\.[a-z]{2,}(/.*)?$"
+    pattern = r"\w+://\w+.\w{3}"
+    print(pattern)
     return bool(re.match(pattern, url))
 
 print(is_valid_url("https://example.com"))  # Output: True

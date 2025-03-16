@@ -12,7 +12,7 @@
  7,1,2,”Moore, Miss. Ann”,female,16,30.0708
  8,0,3,”Wilson, Mr. Henry”,male,19,7.75'''
  
- import pandas as pd
+import pandas as pd
 
 def analyze_titanic_data(file_name):
     try:

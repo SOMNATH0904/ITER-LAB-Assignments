@@ -20,6 +20,6 @@ def extract_emails(input_file, output_file):
         for email in emails:
             out_file.write(email + '\n')
 
-input_file = 'sample.txt'
+input_file = 'emails.txt'
 output_file = 'Output.txt'
 extract_emails(input_file, output_file)

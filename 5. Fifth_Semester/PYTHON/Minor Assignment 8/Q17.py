@@ -18,7 +18,7 @@ def write_to_file(filename):
         print(f"Unexpected error: {e}")
 
 # Input file name
-filename = 'output.txt'
+filename = 'outputs.txt'
 
 # Call function to write user input to file
 write_to_file(filename)
